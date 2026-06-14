@@ -31,4 +31,4 @@ This repository includes pre-configured settings for developing within the `ubun
 - **Clangd Autocomplete**: Configured via [.clangd](.clangd) and [clangd-docker.sh](clangd-docker.sh) to forward syntax analysis and jumping to the container's clangd instance, enabling full CUDA language support in the host editor.
 - **VS Code Tasks**: 
   - `CUDA Build (Docker)`: Press `Ctrl+Shift+B` to compile the currently active `.cu` file into a `<filename>.out` binary in the container.
-  - `CUDA Run (Docker)`: Run the compiled `.out` binary in the container.
+  - `CUDA Run (Docker)`: Run the compiled `.out` binary in the container with `nsys profile` to generate performance reports.

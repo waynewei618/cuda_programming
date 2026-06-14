@@ -36,6 +36,12 @@
         "-w",
         "/workspace/cuda_programming",
         "ubuntu_dev",
+        "nsys",
+        "profile",
+        "-o",
+        "matrix_mul_report",
+        "--force-overwrite",
+        "true",
         "./${relativeFileDirname}/${fileBasenameNoExtension}.out"
       ],
       "group": {

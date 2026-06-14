@@ -262,3 +262,6 @@ __pycache__/
 
 # CUDA Build artifacts
 *.out
+
+# CUDA Profiler reports
+matrix_mul_report.*
