@@ -19,7 +19,7 @@ CUDA version: 11
 
 0. Introduction
 1. Vector Addition
-2. Matrix Multiplication
+2. Matrix Multiplication (Includes baseline, tiled, and **cuBLAS matrix multiplication / vector addition** implementations)
 3. Sum Reduction
 4. Histogram
 5. Convolution
@@ -30,5 +30,7 @@ This repository includes pre-configured settings for developing within the `ubun
 
 - **Clangd Autocomplete**: Configured via [.clangd](.clangd) and [clangd-docker.sh](clangd-docker.sh) to forward syntax analysis and jumping to the container's clangd instance, enabling full CUDA language support in the host editor.
 - **VS Code Tasks**: 
-  - `CUDA Build (Docker)`: Press `Ctrl+Shift+B` to compile the currently active `.cu` file into a `<filename>.out` binary in the container.
+  - `CUDA Build (Docker)`: Press `Ctrl+Shift+B` to compile the currently active `.cu` file into a `<filename>.out` binary in the container (automatically links with `-lcublas` to support cuBLAS scripts).
   - `CUDA Run (Docker)`: Run the compiled `.out` binary in the container with `nsys profile` to generate performance reports.
+- **Makefile (in 02_matrix_mul)**:
+  - Run `make` under `02_matrix_mul` directory to compile cuBLAS vector addition and matrix multiplication, and `make clean` to delete compile outputs.
